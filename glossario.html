@@ -6,6 +6,9 @@
 	<title>Glossário</title>
 
 	<style>
+				body{
+					background-color: rgba(255, 255, 128, .5);
+				}
 				.coluna-50{
 					width:50%;
 					
@@ -25,6 +28,7 @@
 
 			}
 			.direita{
+				font-weight: bolder;
 				margin: 10px 50px 20px;
 
 			}
@@ -48,6 +52,7 @@
 				 <div class="esquerda">
 					<section class="direita">
 					<h1> Definição </h1>
+					<h3  class="aviso"> Clique em algum termo! </h3>
 					<p id= "termo"> </p> 
 				 	<p id="definicao"> </p> 
 				 	<p id="autor"> </p> 
@@ -71,6 +76,7 @@
 				var pos =[];
 				
 				  $("li").click(function(){ 
+				  	$(".aviso").text(""); //para tirar o aviso
 				  	pos = $(this).index();  //pega a posição do elemento clicado
 				  	
 				    //adiciona a cada termo,de uma posição "pos", o seu respectivo 	objeto.
